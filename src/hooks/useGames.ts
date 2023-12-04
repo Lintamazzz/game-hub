@@ -32,7 +32,7 @@ const useGames = (gameQuery: GameQuery) =>
       // undefined means hasNextPage === false
       return lastPage.next ? allPages.length + 1 : undefined;
     },
-    staleTime: 60 * 1000, // if an infinite query becomes stale, all pages will be refetched sequentially
+    staleTime: 24 * 60 * 60 * 1000, // if an infinite query becomes stale, all pages will be refetched sequentially
   });
 
 export default useGames;
